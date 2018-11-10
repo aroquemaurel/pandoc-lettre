@@ -1,0 +1,59 @@
+\documentclass[11pt]{lettre}
+
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+\input{colors.tex}
+\usepackage[urlbordercolor={1 1 1}, linkbordercolor={1 1 1}, linkcolor=vert1, urlcolor=bleu, colorlinks=true]{hyperref}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+\usepackage{eurosym}
+\usepackage{lipsum}
+
+
+\makeatletter
+\newcommand*{\NoRule}{\renewcommand*{\rule@length}{0}}
+% Make links footnotes instead of hotlinks:
+\DeclareRobustCommand{\href}[2]{#2\footnote{\url{#1}}}
+\makeatother
+
+\address{$for(return-address)$$return-address$$sep$\\$endfor$}
+
+\urlstyle{same}  % don't use monospace font for urls
+$if(verbatim-in-note)$
+\VerbatimFootnotes % allows verbatim text in footnotes
+$endif$
+
+$if(links-as-notes)$
+% Make links footnotes instead of hotlinks:
+\DeclareRobustCommand{\href}[2]{#2\footnote{\url{#1}}}
+$endif$
+
+\begin{document}
+%
+\begin{letter}{
+$for(address)$$address$$sep$\\$endfor$}
+\date{$date$} 
+\NoRule
+\vspace{-100px}
+%
+\conc{$conc$}
+
+$if(encl)$
+\vref{$ref$} 
+$endif$
+
+\opening{$opening$}
+
+$body$
+\closing{$closing$}
+
+$if(encl)$
+\encl{$for(encl)$$encl$$sep$\\$endfor$}
+$endif$
+
+
+\end{letter}
+\end{document} 
+
