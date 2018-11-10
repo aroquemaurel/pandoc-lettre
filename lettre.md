@@ -12,6 +12,7 @@ encl:
 - Pièce jointe 1 
 - Pièce jointe 2 
 ref: Référence de la lettre
+# signature: signature.jpg # Le chemin vers votre signature si vous souhaitez en mettre une
 ...
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. **Proin** mollis dolor vitae tristique eleifend. Quisque non ipsum sit amet velit malesuada consectetur. Praesent vel facilisis leo. Sed facilisis varius orci, ut aliquam lorem malesuada in. Morbi nec purus at nisi fringilla varius non ut dui. Pellentesque bibendum sapien velit. Nulla purus justo, congue eget enim a, elementum sollicitudin eros. Cras porta augue ligula, vel adipiscing odio ullamcorper eu. In tincidunt nisi sit amet tincidunt tincidunt. Maecenas elementum neque eget dolor. 

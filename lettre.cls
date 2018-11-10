@@ -793,7 +793,7 @@
 %
 \def\concline{%
          \noindent\parbox[t]{\letterwidth}%
-           {\@hangfrom{\textrm{\concname}}\ignorespaces\concdecl\strut}%
+		 {\vspace{0px}\@hangfrom{\textrm{\concname}}\ignorespaces\concdecl\strut}%
          \par}%
 %
 \def\auxline{%
